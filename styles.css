@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Anybody;
+    src: url(fonts/Anybody[slnt\,wdth\,wght].ttf);
+}
+
+@font-face {
+    font-family: TikTok Sans;
+    src: url(fonts/TikTokSans[opsz\,slnt\,wdth\,wght].ttf);
+}
+
+@font-face {
+    font-family: Monaspace Argon Var;
+    src: url(fonts/MonaspaceArgonVarVF[wght\,wdth\,slnt].ttf);
+    /*src: url(fonts/MonaspaceXenonVarVF[wght\,wdth\,slnt].ttf);*/
+    
+}
+
+@font-face {
+    font-family: Sprat;
+    src: url(fonts/Sprat_Variable.ttf);
+}
+
+@keyframes scale {
+    0% {font-variation-settings: "wght"100, "wdth"50, "slnt"0; top: 20px; border-radius: 96px;}
+    50% {border-radius: 96px;}
+    100% {font-variation-settings: "wght"500, "wdth"80, "slnt"-10; top: 80px; border-radius: 96px 96px 16px 16px;}
+}
+
+@keyframes scale2 {
+    0% {font-variation-settings: "wght"100, "wdth"50, "slnt"0; top: 20px; border-radius: 96px; width: 200px;}
+    100% {font-variation-settings: "wght"500, "wdth"80, "slnt"-10; top: 80px; border-radius: 192px; width: 80%;}
+}
+
+
+body {
+    perspective: 200px;
+    height: 200px;
+    background-size: cover;
+    filter: url(#blur);
+}
+
+#box1 {
+    margin: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(16px); 
+    border-radius: 96px 96px 16px 16px;
+    /*Corner shape er en veldig ny attribute som bare funker på chromium-baserte nettlesere (for nå)*/ 
+    corner-shape: superellipse(2); 
+    border: double 2px rgba(255, 255, 255, 0.5); 
+    color: white; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); 
+    font-family: Anybody; 
+    width: 80%; 
+    position: relative; 
+    padding: 15px 20px 10px 20px; 
+    font-size: 50px; 
+    line-break: normal;
+    top: 80px; 
+    height: fit-content; 
+    text-align: center; 
+    align-items: center; 
+    transition: all .2s; 
+    font-variation-settings: "wght"200, "wdth"100; 
+    animation: 1s scale both; 
+}
+
+#content {
+    top: 82px;
+    color: white;
+    font-family: Monaspace Argon Var;
+    padding: 20px;
+    border: double 2px rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 16px 16px 96px 96px;
+    corner-shape: superellipse(2);
+    font-size: 20px;
+    width: 80%;
+    backdrop-filter: blur(16px);
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    line-break: normal;
+    contain:content;
+    height: fit-content;
+    animation: up 1s both;
+}
+
+#div4{
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    font-size: 200px;
+    font-family: Sprat;
+    animation: pulse 8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0px 0px 10px red; font-variation-settings: "wght"100, "wdth"10;
+    }
+    50% {
+        text-shadow: 0px 0px 50px red; color: red; font-variation-settings: "wght"200, "wdth"200;
+    }
+    100% {
+        text-shadow: 0px 0px 10px red; font-variation-settings: "wght"100, "wdth"10;
+    }
+}
+
+@keyframes up {
+    0% {
+        top: 120px; border-radius: 96px;
+    }
+    100% {
+        top: 82px; border-radius: 16px 16px 64px 64px;
+    }
+}
+
+.yaris {
+    width:200px;
+    height:auto; 
+    margin-top: 10px; 
+    border-radius: 50px; 
+    corner-shape: superellipse(2); 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: all .3s;
+}
+
+.yaris:hover {
+    width:300px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.jazz {
+    width:200px;
+    height:auto; 
+    margin-top: 10px; 
+    border-radius: 50px; 
+    corner-shape: superellipse(2); 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: all .3s;
+}
+
+.jazz:hover {
+    width:300px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.sidenav {
+    height: 1100px;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    corner-shape: superellipse(2);
+    border-radius: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.sidenav .closebtn {
+    position: relative;
+    text-decoration: none;
+    top: 0;
+    right: 0px;
+    font-size: 50px;
+    margin-right: 20px;
+    text-align: end;
+    font-family: TikTok Sans;
+    font-variation-settings: "wght"200, "wdth"100;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.sidenav .closebtn:hover {
+    font-variation-settings: "wght"800, "wdth"10;
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    font-size: 50px;
+    left: 0px;
+}
+
+.sidenav a {
+    position: relative;
+    padding: 16px 8px 8px 16px;
+    text-decoration: none;
+    font-family: Anybody;
+    font-size: 50px;
+    color: #a9a9a9;
+    left: 0px;
+    display: block;
+    transition: 0.3s all;
+    font-variation-settings: "wght"200, "wdth"100;
+}
+.sidenav a:hover {
+    background-color: rgba(200, 40, 40, 0.5);
+    color: #f1f1f1;
+    border-radius: 20px;
+    corner-shape: superellipse(2);
+    font-variation-settings: "wght"300, "wdth"100;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+    font-size: 100px;
+    left: 1px;
+}
+
+
+#openNav {
+    position: relative;
+    left: 80px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ddd;
+    border: 1px solid black;
+    corner-shape: superellipse(2);
+    font-size: 30px;
+    border-radius: 32px;
+    box-shadow: 0px 4px 0px;
+    padding: 6px 14px 6px 14px;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: anybody;
+}
+
+#openNav:hover {
+    filter: brightness(120%);
+}
+
+#openNav:active {
+    box-shadow: 0px 0px 0px;
+    transform: translateY(4px);
+    filter: brightness(90%);
+}
+
+#main {
+    background: none;
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    scale: 20%;
+    border: solid 2px black;
+    -webkit-transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:active {      
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 60px;
+}
+

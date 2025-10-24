@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html" id="1">Hjem</a>
+        <a href="about.html" id="2">Om meg</a>
+        <a href="projects.html" id="3">Prosjekter</a>
+        <a href="4.html" id="4">4</a>
+    </div>
+    <div id="main">
+        <div type="button" id="openNav" onclick="openNav()"><strong>≡</strong></div>
+        <div id="box1">Kontaktinfo</div>
+        <div id="content"><strong>E-post:</strong> albert25@iktfag.com/albmarsti@gmail.com<br><strong>Telefon:</strong> 401 09 511
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <svg>
+        <defs>
+            <filter id="blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0 0" result="gaussianBlur">
+                <animate 
+                    attributeName="stdDeviation"
+                    values="0 100;0 0"
+                    dur=".4s"
+                    repeatCount="0"
+                />
+                </feGaussianBlur>
+            </filter>
+        </defs>
+    </svg>
+</body>
+
+</html>
